@@ -11,7 +11,7 @@ class Donatur_model extends CI_model
     {
         $data = [
 
-            "nama" => $this->input->post('username', true),
+            "username" => $this->input->post('username', true),
             "email" => $this->input->post('email', true),
             "password" => $this->input->post('password', true),
             "alamat" => $this->input->post('alamat', true),
@@ -21,4 +21,5 @@ class Donatur_model extends CI_model
 
         $this->db->insert('donatur', $data);
     }
+
 }
