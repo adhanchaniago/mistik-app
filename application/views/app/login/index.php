@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?= base_url(); ?>asset/css/style.css">
 <link rel="stylesheet" href="<?= base_url(); ?>asset/css/fixed-navbar.css">
 
-<!-- TEST -->
+<!-- Change comment -->
 
 <!-- Just an image -->
 <header class="header-no-option">
