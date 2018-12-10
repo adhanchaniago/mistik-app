@@ -10,8 +10,8 @@
 	</div>
 </header>
 <div class="container-fluid main">
-	<div class="row float-left">
-		<img src="<?= base_url(); ?>assest/img/bg-login-01.png">
+	<div class="row">
+		<img src="<?= base_url(); ?>assest/img/:bg-login-01.png">
 	</div>
 	<div class="row float-right">
 		<div class="hello">
@@ -41,9 +41,8 @@
 </div>
 
 <script>
-	$('html, body').css({
+	$('html', 'body').css({
 		overflow: 'hidden',
 		height: '100%'
 	});
-
 </script>

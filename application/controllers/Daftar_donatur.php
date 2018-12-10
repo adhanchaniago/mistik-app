@@ -28,7 +28,7 @@ class Daftar_donatur extends CI_Controller
                         ),
                         array(
                                 'field' => 'alamat',
-                                'label' => 'Alamat',
+                                'label' => 'Address',
                                 'rules' => 'required'
                         ),
                         array(
