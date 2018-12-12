@@ -17,6 +17,11 @@ class Daftar_donatur extends CI_Controller
 
                 $config = array(
                         array(
+                                'field' => 'nama-lengkap',
+                                'label' => 'Name',
+                                'rules' => 'required'
+                        ),
+                        array(
                                 'field' => 'username',
                                 'label' => 'Username',
                                 'rules' => 'required'
@@ -58,7 +63,7 @@ class Daftar_donatur extends CI_Controller
                 if ($this->form_validation->run() == false) {
 
                         $this->load->view('templates/header', $data);
-                        $this->load->view('app/daftar donatur/index', $data);
+                        $this->load->view('daftar donatur/index', $data);
                         $this->load->view('templates/footer');
 
                 } else {

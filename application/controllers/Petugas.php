@@ -1,5 +1,5 @@
 <?php
-    class Admin extends CI_Controller {
+    class Petugas extends CI_Controller {
 
         function __construct(){
             parent:: __construct();
@@ -9,21 +9,21 @@
                 redirect($url);
             }
         }
-
+        
         function index(){
-            $this->template->load('admin/template', 'admin/dashboard');
+            $this->template->load('petugas/template', 'petugas/dashboard');
             }
     
         function tables() {
-                $this->template->load('admin/template', 'admin/table');
+                $this->template->load('petugas/template', 'petugas/table');
             }
         
             function profile() {
-                $this->template->load('admin/template', 'admin/profile');
+                $this->template->load('petugas/template', 'petugas/profile');
             }
         
             function maps() {
-                $this->template->load('admin/template', 'admin/maps');
+                $this->template->load('petugas/template', 'petugas/maps');
             }
         
         

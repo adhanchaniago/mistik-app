@@ -11,6 +11,7 @@ class Donatur_model extends CI_model
     {
         $data = [
 
+            "nama_lengkap" => $this->input->post('nama-lengkap', true),
             "username" => $this->input->post('username', true),
             "email" => $this->input->post('email', true),
             "password" => md5($this->input->post('password', true)),

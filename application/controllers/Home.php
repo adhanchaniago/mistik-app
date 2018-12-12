@@ -15,7 +15,7 @@ class Home extends CI_Controller
         $data['judul'] = 'Mistik';
         $data['bencana'] = $this->Bencana_model->getAllBencana();
         $this->load->view('templates/header' , $data);
-        $this->load->view('app/index', $data);
+        $this->load->view('home/index', $data);
         $this->load->view('templates/footer');
     }
 }

@@ -15,7 +15,7 @@
 	crossorigin="anonymous">
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="<?= base_url(); ?>asset/img/mistik.ico">
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/img/mistik.ico">
 
 	<title>
 		<?php echo $judul; ?>
