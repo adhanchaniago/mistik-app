@@ -1,5 +1,5 @@
+<!-- My CSS -->
 <link rel="stylesheet" href="<?= base_url(); ?>asset/css/style.css">
-<link rel="stylesheet" href="<?= base_url(); ?>asset/css/fixed-navbar.css">
 
 <!-- Just an image -->
 <header class="header-no-option">
@@ -10,8 +10,8 @@
 	</div>
 </header>
 <div class="container-fluid main">
-	<div class="row">
-		<img src="<?= base_url(); ?>assest/img/bg-login-01.png">
+	<div class="row float-left">
+		<!-- <img src="<?= base_url(); ?>asset/img/bg-login-01.png" width="1400" height="800"> -->
 	</div>
 	<div class="row float-right">
 		<div class="hello">
@@ -25,15 +25,15 @@
 						<label for="username">Username</label>
 						<input type="text" class="form-control" id="username" name="username" placeholder="Masukan Username">
 					<?php if (validation_errors()) : ?>
-						<span class="text-danger"><?= form_error('username'); ?></span>
+						<small><span class="text-danger"><?= form_error('username'); ?></span></small>
 					<?php endif ?>
-					</div>
+					</div> 
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 					
 					<?php if (validation_errors()) : ?>
-						<span class="text-danger"><?= form_error('password'); ?></span>
+						<small><span class="text-danger"><?= form_error('password'); ?></span></small>
 					<?php endif ?>
 
 					<?php if ($this->session->flashdata('error')) : ?>

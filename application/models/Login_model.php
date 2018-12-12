@@ -11,9 +11,9 @@ class Login_model extends CI_Model
         $query = $this->db->get('donatur');
 
         if ($query->num_rows() > 0) {
-            return 1;
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
 }
