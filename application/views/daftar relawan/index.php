@@ -144,8 +144,8 @@
 							</div>
 							<?php endif ?>
 							<div class="invisible">
-								<label for="repeat">Role</label>
-								<input type="number" value="1" class="form-control" id="repeat" name="level" placeholder="Ulangi Password">
+								<label for="level">Role</label>
+								<input type="number" value="2" class="form-control" id="level" name="level" placeholder="Ulangi Password">
 							</div>
 						</div>
 					</div>

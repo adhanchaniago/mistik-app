@@ -10,21 +10,19 @@
             }
         }
 
-        function index(){
+        function index() {
             $this->template->load('admin/template', 'admin/dashboard');
+            // $this ->load ->view('admin/template', 'admin/table');
+            // $this ->load ->view('admin/template', 'admin/profile');
+            // $this ->load ->view('admin/template', 'admin/maps');
             }
-    
         function tables() {
-                $this->template->load('admin/template', 'admin/table');
-            }
-        
-            function profile() {
-                $this->template->load('admin/template', 'admin/profile');
-            }
-        
-            function maps() {
-                $this->template->load('admin/template', 'admin/maps');
-            }
-        
-        
-    }
+        	$this->template->load('admin/template', 'admin/table');
+        }
+        function profile() {
+        	$this->template->load('admin/template', 'admin/profile');
+        }
+        function maps() {
+        	$this->template->load('admin/template', 'admin/maps');
+        }
+        }
