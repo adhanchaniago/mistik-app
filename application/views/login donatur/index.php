@@ -59,11 +59,11 @@
 						<label for="password">Password</label>
 						<input type="password" class="form-control" id="password" name="password" placeholder="Password">
 
-						<?php if (validation_errors()) : ?>
+						<?php if (validation_errors()) : ?>						
 						<small><span class="text-danger">
 								<?= form_error('password'); ?></span></small>
 						<?php endif ?>
-						<!-- Memperbaiki loginnya -->
+
 						<?php if ($this->session->flashdata('error')) : ?>
 						<small><span class="text-danger">
 								<?= $this->session->flashdata('error'); ?></span></small>

@@ -76,13 +76,10 @@ class Daftar_relawan extends CI_Controller
                 $this->form_validation->set_rules($config);
 
                 if ($this->form_validation->run() == false) {
-
-                        $this->load->view('templates/header' , $data);
-                        $this->load->view('daftar relawan/index', $data);
-                        $this->load->view('templates/footer');
+                        $this->load->view('daftar relawan/index');  
                 } else {
                         $this->Petugas_model->tambahDataPetugas();
-                        $this->session->set_flashdata('flash', 'Disimpan');
+                        $this->session->set_flashdata('flash', 'Terdaftar');
                         redirect('daftar_relawan');
                 }
     }
