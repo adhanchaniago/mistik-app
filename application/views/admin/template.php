@@ -14,11 +14,18 @@
         <!--  Material Dashboard CSS    -->
         <link href="<?php echo base_url(); ?>assets/css/material-dashboard.css?v=1.2.0" rel="stylesheet" />
         <!--  CSS for Demo Purpose, don't include it in your project     -->
-       
+    
         <!--     Fonts and icons     -->
-        
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+
+        <!-- Mapbox -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+    
+    
+    
     </head>
 
     <body>
@@ -45,21 +52,33 @@
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'admin/profileBencana' ?>">
+                                <i class="material-icons">poll</i>
+                                <p>Data Program</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profileLogistik' ?>">
+                                <i class="material-icons">assignment_late</i>
+                                <p>Data Kelogistik</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url() . 'admin/profilePetugas' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Relawan</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/profile' ?>">
-                                <i class="material-icons">person</i>
+                            <a href="<?php echo base_url() . 'admin/profileDonatur' ?>">
+                                <i class="material-icons">people</i>
                                 <p>Data Donatur</p>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url() . 'admin/tables' ?>">
-                                <i class="material-icons">content_paste</i>
-                                <p>Table List</p>
+                            <a href="<?php echo base_url() . 'admin/profilePosko' ?>">
+                                <i class="material-icons">business</i>
+                                <p>Data Posko</p>
                             </a>
                         </li>
                         <li>
@@ -85,13 +104,13 @@
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <!-- <li>
+                                <li>
                                     <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">dashboard</i>
                                         <p class="hidden-lg hidden-md">Dashboard</p>
                                     </a>
-                                </li> -->
-                                <!-- <li class="dropdown">
+                                </li>
+                                <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="material-icons">notifications</i>
                                         <span class="notification">5</span>
@@ -114,7 +133,7 @@
                                             <a href="#">Another One</a>
                                         </li>
                                     </ul>
-                                </li> -->
+                                </li>
                                 <li>
                                     <a href="<?php echo base_url().'logindb/logout'?>">Logout</a>
                                 </li>
@@ -166,6 +185,11 @@
 <script src="<?php echo base_url(); ?>assets/js/material-dashboard.js?v=1.2.0"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="<?php echo base_url(); ?>assets/js/demo.js"></script>
+<!-- Script Sweet Alert2 -->
+<script src="<?= base_url()?>assets/js/sweetalert2.all.min.js"></script>
+<!-- My JSS -->
+<script src="<?= base_url()?>assets/js/sweetalertfix.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
 

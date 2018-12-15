@@ -4,7 +4,8 @@ class Petugas_model extends CI_model
 {
     public function getAllPetugas()
     {
-        return $this->db->get('petugas')->result_array();
+        $query = $this->db->query("SELECT * FROM petugas ORDER BY id_petugas DESC")->result_array();
+        return $query;
     }
 
     public function tambahDataPetugas()
@@ -34,6 +35,21 @@ class Petugas_model extends CI_model
     public function hapusDataPetugas($id)
     {
         $this->db->delete('petugas', array('id_petugas' => $id));
+    }
+
+    public function editDataPetugas($id)
+    {
+        $data = [
+
+            "nama_depan" => $this->input->post('nama-depan', true),
+            "nama_belakang" => $this->input->post('nama-belakang', true),
+            "no_telepon" => $this->input->post('notelp', true),
+            "alamat" => $this->input->post('alamat', true)
+
+        ];
+
+        $this->db->where('id_petugas', $id);
+        $this->db->update('petugas', $data);
     }
     
 }
