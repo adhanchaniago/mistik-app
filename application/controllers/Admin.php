@@ -20,6 +20,9 @@ class Admin extends CI_Controller {
                 $data['bencana'] = $this->Bencana_model->getAllBencana();
                 $data['petugas'] = $this->Petugas_model->getAllPetugas();
                 $data['donatur'] = $this->Donatur_model->getAllDonatur();
+                $data['posko'] = $this->Posko_model->getTotalPosko();
+                $data['program'] = $this->Bencana_model->getTotalProgram();
+                $data['pengungsi'] = $this->Bencana_model->getTotalPengungsi();
                 $this->template->load('admin/template', 'admin/dashboard', $data);
         }
         
@@ -270,6 +273,40 @@ class Admin extends CI_Controller {
                         $this->Posko_model->tambahDataPosko();
                         $this->session->set_flashdata('flash', 'Ditambah');
                         redirect('admin/buatPosko');
+                }
+        }
+
+        function buatProgram() {
+
+                
+                $config = array(
+                        array(
+                                'field' => 'nama-program',
+                                'label' => 'Program name',
+                                'rules' => 'required'
+                        ),
+                        array(
+                                'field' => 'jumlah-pengungsi',
+                                'label' => 'refuges',
+                                'rules' => 'required|numeric'
+                        ),
+                        array(
+                                'field' => 'deskripsi',
+                                'label' => 'Description',
+                                'rules' => 'required'
+                        ),
+                );
+                
+                $this->form_validation->set_rules($config);
+                
+                if ($this->form_validation->run() == false) {
+                        
+                        $this->template->load('admin/template', 'admin/buat_program');
+                        
+                } else {
+                        $this->Bencana_model->tambahDataBencana();
+                        $this->session->set_flashdata('flash', 'Ditambah');
+                        redirect('admin/buatProgram');
                 }
         }
 

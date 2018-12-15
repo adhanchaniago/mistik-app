@@ -11,7 +11,7 @@ if (flashData) {
 
 if (flashData2) {
 	Swal({
-		title: 'Behasil',
+		title: 'Berhasil',
 		text: 'Data Telah ' + flashData2,
 		type: 'success'
 	});

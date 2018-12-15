@@ -8,6 +8,13 @@ class Posko_model extends CI_Model{
         return $query;
     }
 
+    public function getTotalPosko()
+    {
+        $this->db->select('COUNT(nama_posko) as total');
+        $this->db->from('posko');
+        return $this->db->get()->row()->total; 
+    }
+
     public function hapusDataPosko($id)
     {
         $this->db->delete('posko', array('id_posko' => $id));

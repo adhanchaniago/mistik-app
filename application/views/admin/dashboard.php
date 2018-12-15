@@ -7,17 +7,8 @@
 						<i class="material-icons">content_copy</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Data Posko</p>
-						<h3 class="title">
-						<!-- Array sum -->
-						<?php foreach ($bencana as $bcn) {
-								echo $bcn['posko'];
-								//$arr = $bcn['posko'];
-								//$sum = array_sum($arr);
-								//echo $sum;
-								//echo array_sum($bcn['posko']);
-						} ?>
-						</h3>
+						<p class="category">Total Program</p>
+						<h3 class="title"><?php echo $program; ?></h3>
 					</div>
 					<div class="card-footer">
 						<div class="stats">
@@ -31,8 +22,8 @@
 						<i class="material-icons">store</i>
 					</div>
 					<div class="card-content">
-						<p class="category">Total Programs</p>
-						<h3 class="title">4</h3>
+						<p class="category">Total Posko</p>
+						<h3 class="title"><?php echo $posko; ?></h3>
 					</div>
 					<div class="card-footer">
 						<div class="stats">
@@ -48,7 +39,7 @@
 					</div>
 					<div class="card-content">
 						<p class="category">Total Pengungsi</p>
-						<h3 class="title">75.000</h3>
+						<h3 class="title"><?php echo $pengungsi; ?></h3>
 					</div>
 					<div class="card-footer">
 						<div class="stats">
